@@ -1,0 +1,398 @@
+@import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+/*base*/
+
+
+:root {
+    --background: #343536;
+    --primary-background: #f4f4f4;
+    --secondary-backgroud: #F7AF25; 
+    --foreground: #f39f02;
+    --primary-foreground: #1c1c1c;
+    --secondary-foreground: #ff3131;
+
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin:0;
+    padding: 0;
+    background-color: var(--background);
+    color: var(--primary-background);
+    font-family: "Jost";
+    font-weight: 400;
+}
+
+
+
+.container {
+    max-width: 1300px;
+    margin: 0 auto;
+}
+
+/*config*/
+
+ul {
+    list-style-type: none;
+    padding:0;
+}
+h1 {
+    font-family: "Poppins";
+    font-size: 40px;
+    color: var(--secondary-backgroud);
+    margin-top:80px;
+    text-align: center;
+    margin-bottom:0;
+}
+
+a { 
+    color: var(--primary-background);
+}
+
+input[type="submit"], button {
+    font-family: "Poppins";
+    width: 100%;
+    height: 50px;
+    text-decoration: none;
+    background-color: var(--primary-background);
+    color:var(--primary-foreground);
+    outline: none;
+    border: none;
+    text-transform: uppercase;
+    font-size: 14pt;
+    font-weight: bolder;
+    transition: all linear .2s;
+}
+input[type="submit"]:hover, button:hover {
+    cursor: pointer;
+    background-color: var(--foreground);
+}
+
+select {
+    background-color: var(--background);
+    color: var(--primary-background);
+    width: 100%;
+    padding:5px;
+    margin-bottom:10px;
+    border-color: var(--primary-background);
+}
+
+/*HEADER*/
+
+header {
+    display: flex;
+    flex-direction: row;
+    max-height: 400px;
+
+}
+.logo {
+    flex:1;
+    justify-content: flex-start;
+}
+
+header .logo img {
+    width: 250px;
+    height: 250px;
+}
+
+header .contato {
+    align-self: center;
+    border: .1px solid var(--background);
+    box-shadow: 1px 3px 3px 1px #1c1c1c;
+    border-radius: 10px;
+    padding:20px;
+    max-height: 170px;
+    
+
+}
+header .contato a {
+    text-decoration: none;
+    
+}
+
+header .contato a:hover, li:hover {
+    color: var(--secondary-backgroud);
+}
+
+header .contato li {
+    align-self: center;
+    font-size: 13pt;
+    font-weight: bold;
+    line-height: 1.8;
+    
+}
+
+/*main*/
+
+main hr {
+    background-color: var(--secondary-backgroud);
+    border: none;
+    height: 7px;
+    width: 10%;
+}
+
+main .produtos {
+    display: inline-grid;
+    grid-template-columns: auto auto auto;
+    width: 400px;
+    max-width: 400px;    
+}
+main .produto {
+    align-items: center;
+    margin-bottom:40px;
+    padding:20px;
+    max-height: 600px;
+    transition: all ease-out .1s;      
+}
+
+main .produto:hover {
+    cursor: pointer;
+    background-color: var(--secondary-backgroud);
+    box-shadow: 0px 0px 40px 0px var(--secondary-backgroud);
+    transform: scale(1.050);
+}
+
+
+
+main .produtos .produto img {
+    width: 400px;
+    height: 350px;
+    margin:0;
+    padding:0;
+    
+    
+}
+
+main .produtos .produto p {
+    margin:0;
+    padding-left: 10px;
+    padding-right: 10px;
+    text-align: center;
+}
+
+main .produto .preco {
+    color: var(--primary-background);
+    background-color: var(--secondary-foreground);
+    font-family: "Poppins";
+    font-size: 40px;
+    font-weight: bolder;
+    
+}
+
+main .produto .desc {
+    padding:10px;
+    min-height: 100px;
+    font-size: 13pt;
+}
+main .produto .nome {
+    display: none;
+}
+
+main .produto .desc-sabores {
+    padding:10px;
+    min-height: 60px;
+    font-size: 13pt;
+}
+
+main .limpar-carrinho {
+    margin-top:10px;
+}
+
+main .whatsapp {
+    margin-top:20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+main .whatsapp img {
+    width: 400px;
+    height: 400px;
+    transition: transform ease-in .8s;
+}
+main .whatsapp img:hover {
+    transform: scale(1.300) rotate(360deg);
+    cursor: pointer;
+}
+
+.topo, .sac {
+    float: right;
+    position: absolute;
+    right: 50px;
+    margin-top: 50px;
+    cursor: pointer;
+}
+
+.topo img {
+    width: 120px;
+    height: 120px;
+}
+
+
+
+
+/*footer*/
+footer {
+    margin-top:200px;
+    width: 100%;
+    min-height: 200px;
+    background-color: #1c1c1c;
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    
+}
+footer .footer-logo img {
+    width: 200px;
+    height: 200px;
+}
+
+
+footer .social img {
+    width: 60px;
+    height: 60px;
+    padding:5px;
+}
+
+footer .social .fb, .ins, .wpp {
+    
+    border-radius: 30%;
+    transition: ease all .4s;
+}
+footer .social .fb:hover, .ins:hover, .wpp:hover {
+    background-color: var(--foreground);
+    cursor: pointer;
+
+}
+
+
+/*pedido*/
+main .comanda {
+    margin: 0 auto;
+    width: 70%;
+    height: 600px;
+    border-radius: 10px;
+    border: 1px .1px solid var(--secondary-backgroud);
+    box-shadow: 1px 1px 20px 1px var(--secondary-backgroud);
+    background-color: var(--secondary-backgroud);
+    font-size: 17pt;
+    font-weight: 500;
+    overflow-y: auto;
+}
+
+main .comanda .item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 30px;
+}
+
+main .comanda .quantidade {
+    margin-right: 5px;
+}
+
+main .comanda .nome-pedido {
+    flex-grow: 1;
+    text-align: left;
+}
+
+main .comanda .preco-pedido {
+    white-space: nowrap;
+}
+
+/* Adicione estilos para o total e o frete */
+main .comanda .total-container {
+    text-align: right;
+    border-top: .1px solid var(--secondary-backgroud);
+    padding-top: 20px;
+    margin: 30px;
+}
+
+main .comanda .total,
+main .comanda .frete,
+main .comanda .total-com-frete {
+    display: block;
+}
+
+main .finalizar-pedido {
+    margin: 0 auto;
+    width: 70%;
+} 
+main .finalizar-pedido button {
+    margin-top: 17px;
+}
+
+/*pagina de espera*/
+main .espera {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+main .espera img {
+    width: 250px;
+    height: 250px;
+    margin-top: 40px;
+}
+
+main .espera .cronometro {
+    margin: 0;
+    font-size: 100pt;
+}
+
+.sac {
+    position: fixed;
+    bottom: 5px;
+    
+}
+.sac img {
+    width: 200px;
+    height: 200px;
+    transition: ease-in-out all .3s;
+}
+
+.sac img:hover {
+    transform: scale(1.300);
+}
+
+
+/*responsividade*/
+
+@media (width < 1310px) {
+    main .produtos {
+        grid-template-columns: repeat(2, 1fr);
+        
+    }
+}
+@media (width < 900px) {
+    header .logo {
+        text-align: center;
+    }
+
+    header .contato{
+        display: none;
+    }
+
+    
+    main .produtos {
+        grid-template-columns: repeat(1, 1fr);
+       
+    }
+
+        
+    .sac {
+       right: 10px;
+    }
+    .sac img {
+        width: 120px;
+        height: 120px;
+    }
+
+
+
+    
+}
