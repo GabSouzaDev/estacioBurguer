@@ -362,37 +362,101 @@ main .espera .cronometro {
 
 /*responsividade*/
 
-@media (width < 1310px) {
+@media only screen and (max-width: 1310px) {
     main .produtos {
         grid-template-columns: repeat(2, 1fr);
         
     }
 }
-@media (width < 900px) {
+@media only screen and (max-width: 600px) {
+
+    body {
+        font-size: 14px;
+    }
+
+    .container {
+        max-width: 100%;
+    }
+
+    h1 {
+        font-size: 24px;
+        margin-top: 40px;
+    }
+    
+    
+
     header .logo {
         text-align: center;
     }
 
-    header .contato{
+    header .logo img {
+        
+        width: 155px;
+        height: 155px;
+    }
+    header .contato {
         display: none;
     }
 
-    
     main .produtos {
-        grid-template-columns: repeat(1, 1fr);
-       
+        grid-template-columns: auto;
+        width: 100%;
     }
 
-        
-    .sac {
-       right: 10px;
-    }
-    .sac img {
-        width: 120px;
-        height: 120px;
+    main .produtos .produto img {
+        width: 100%;
+        height: auto;
     }
 
-
-
+    main .whatsapp img {
+        width: 200px;
+        height: 200px;
+    }
     
+    .topo {
+        left:57%;
+        transform: translate(-50%, -50%);
+        
+    }
+
+
+    .topo img, .sac img {
+        width: 60px;
+        height: 60px;
+    }
+
+    footer .footer-logo img {
+        width: 100px;
+        height: 100px;
+    }
+
+    footer .social img {
+        width: 30px;
+        height: 30px;
+    }
+
+    main .comanda {
+        width: 90%;
+        height: auto;
+        font-size: 10pt;
+    }
+
+    main .espera img {
+        width: 155px;
+        height: 155px;
+    }
+
+    main .espera .cronometro {
+        font-size: 70pt;
+    }
+
+    .sac {
+        right: 10px;
+        bottom: 30px;
+    }
+
+    .sac img {
+        width: 100px;
+        height: 100px;
+    }
 }
