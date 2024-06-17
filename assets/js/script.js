@@ -60,3 +60,11 @@ botaoLimpar.addEventListener('click', function() {
 
     alert('Carrinho limpo com sucesso');
 })
+
+//voltar a pagina ao topo
+document.getElementById('navTop').addEventListener('click', function(){
+    window.scrollTo({
+        top:0,
+        behavior: 'smooth'
+    });
+});
